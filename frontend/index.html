@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareSphere - Patient Management</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1><i class="fas fa-hospital-symbol"></i> CareSphere</h1>
+                <p class="tagline">Advanced Patient Management System</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="card add-patient-section">
+                <h2><i class="fas fa-user-plus"></i> Add New Patient</h2>
+                <form id="patientForm" class="patient-form">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                        <input type="text" id="name" placeholder="Enter patient name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age"><i class="fas fa-calendar-alt"></i> Age</label>
+                            <input type="number" id="age" placeholder="Enter age">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="diagnosis"><i class="fas fa-stethoscope"></i> Diagnosis</label>
+                            <input type="text" id="diagnosis" placeholder="Enter diagnosis">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-plus-circle"></i> Add Patient
+                    </button>
+                </form>
+            </section>
+
+            <section class="card patient-list-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> Patient Records</h2>
+                    <button class="btn-refresh" id="refreshBtn">
+                        <i class="fas fa-sync"></i> Refresh
+                    </button>
+                </div>
+                <div id="patientsContainer" class="patients-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
